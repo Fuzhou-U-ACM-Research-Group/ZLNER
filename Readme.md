@@ -51,7 +51,6 @@ weibo，ontonotes，msra
 工作点1：
 预训练模型，在训练的过程中加入提示信息，如：原句：“小明是一个中国人”，提示信息会转变成“小是一个实体，明是一个实体，是是一个非实体，依此类推”，预训练过程中会将原句和提示信息一同输入到模型中
 
-# %% 
 ```python
 # Bert预训练
 import os
@@ -107,7 +106,6 @@ for i in pre_trainer(lr=1e-4):
 
 需要用到一个外部词典：THUOCL_FN_medical（一个是THUOCL的词库，还有一个是福能体检那边提供关键词）
 disease.dic是LSTM-CRF-medical-master 用命名实体识别模型抽取的实体和用匹配词等七七八八的规则抽取
-**Trainer LELoader**
 
 ```python
 from CC.predicter import NERPredict
@@ -149,8 +147,6 @@ trainer = NERTrainer(**args)
 for i in trainer():
     a = i
 ```
-
-**Trainer CNLoader**
 
 ```python
 from CC.trainer import NERTrainer
