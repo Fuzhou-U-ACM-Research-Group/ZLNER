@@ -105,7 +105,7 @@ for i in pre_trainer(lr=1e-4):
 验证的时候需要将预训练模型替换成你自己的。
 
 需要用到一个外部词典：THUOCL_FN_medical（一个是THUOCL的词库，还有一个是福能体检那边提供关键词）
-disease.dic是LSTM-CRF-medical-master 用命名实体识别模型抽取的实体和用匹配词等七七八八的规则抽取
+disease.dic是LSTM-CRF-medical-master （github可以找到）用命名实体识别模型抽取的实体和用匹配词等七七八八的规则抽取
 
 ```python
 from CC.predicter import NERPredict
