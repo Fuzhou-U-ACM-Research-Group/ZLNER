@@ -148,45 +148,7 @@ for i in trainer():
     a = i
 ```
 
-```python
-from CC.trainer import NERTrainer
-from CC.predicter import NERPredict
 
-args = {
-    'num_epochs': 30,
-    'num_gpus': [0],
-    'bert_config_file_name': './model/chinese_wwm_ext/bert_config.json',
-    'pretrained_file_name': './model/chinese_wwm_ext/pytorch_model.bin',
-    # 'pretrained_file_name': './save_pretrained/cdd_pre_3/Bert_10470/pytorch_model.bin',
-    'hidden_dim': 300,
-    'max_seq_length': 128,
-    'max_scan_num': 1000000,
-    'inter_max_scan_num': 39000,
-    'train_file': './data/CDD/train_2000.json',
-    'eval_file': './data/CDD/dev.json',
-    'test_file': './data/CDD/test.json',
-    'bert_vocab_file': './model/chinese_wwm_ext/vocab.txt',
-    'tag_file': './data/CDD/labels.txt',
-    'loader_name': 'le_loader_zl',
-    # 'loader_name': 'le_loader',
-    'output_eval':True,
-    "word_embedding_file":"./data/tencent/word_embedding.txt",
-    "word_vocab_file":"./data/tencent/tencent_vocab.txt",
-    "inter_knowledge_file":"./data/tencent/disease.dic",
-    "default_tag":"O",
-    'batch_size': 8,
-    'eval_batch_size': 64,
-    'do_shuffle': True,
-    "use_gpu": True,
-    "debug": True,
-    'model_name': 'ZLEBert',
-    'classify':'lstm_crf',
-    'task_name': 'cdd_disease_1'
-}
-trainer = NERTrainer(**args)
-
-for i in trainer(lr2=1e-2):
-    a = i
 ```
 
 **Predictor**
